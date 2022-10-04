@@ -2,13 +2,44 @@
 <html> 
 
 <head>
+    <link rel="stylesheet" href="style.css">
+    <title>hw-04</title>
     <meta charset=utf-8/>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 
 
 <body>
 
+    <h1 class="centered_header">hw-04: Event Handling</h1>
 
+    <div class="two_cols">
+        <div class="left_col">
+            <svg id="frame">
+                
+                <!-- setting up x and y axis -->
+                <rect id="y_axis" x="0" y="0" width="3" height="370"/>
+                <rect id="x_axis" x="0" y="367" width="370" height="3"/>
+
+                <!-- adding points, original vals * 40 -->
+                <circle cx="40" cy="290" r="10"/>
+                <circle cx="80" cy="210" r="10"/>
+                <circle cx="240" cy="290" r="10"/>
+                <circle cx="360" cy="10" r="10"/>
+
+            </svg>
+
+        </div>
+
+        <div class="right_col">
+
+            
+        </div>
+    </div>
+
+
+
+<script src=main.js></script>
 </body>
 
 </html>
