@@ -34,6 +34,20 @@ function getPoint() {
     newP.setAttribute('cx', cx);
     newP.setAttribute('cy', cy);
     newP.setAttribute('r', 10);
+    newP.addEventListener("click", function() {
+    // adding border
+    this.classList.toggle("borderAdd");
+    
+    // displaying coordinate
+    var x = (this.getAttribute('cx')) / 40;
+    var y = ((this.getAttribute('cy')) - 375) / -40;
+    var pointdisplay = document.getElementById('pointClick');
+    var pointtext = document.getElementById('point');
+    pointtext.innerHTML = ' (' + x + ', ' + y + ')';
+    pointdisplay.style.display = 'block';
+    pointtext.style.display = 'block';
+  });
+
     var svg = document.getElementById('frame')
     svg.appendChild(newP);
 
