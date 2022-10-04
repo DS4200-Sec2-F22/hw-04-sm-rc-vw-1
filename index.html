@@ -18,14 +18,16 @@
             <svg id="frame">
                 
                 <!-- setting up x and y axis -->
-                <rect id="y_axis" x="0" y="0" width="3" height="370"/>
-                <rect id="x_axis" x="0" y="367" width="370" height="3"/>
+                <rect id="y_axis" x="0" y="0" width="3" height="375"/>
+                <rect id="x_axis" x="0" y="372" width="375" height="3"/>
 
-                <!-- adding points, original vals * 40 -->
-                <circle cx="40" cy="290" r="10"/>
-                <circle cx="80" cy="210" r="10"/>
-                <circle cx="240" cy="290" r="10"/>
-                <circle cx="360" cy="10" r="10"/>
+                <!-- adding points, x = og vals * 40, y = (375 - (og vals* 40)) -->
+                <circle cx="40" cy="295" r="10"/>
+                <circle cx="80" cy="215" r="10"/>
+                <circle cx="240" cy="295" r="10"/>
+                <circle cx="360" cy="15" r="10"/>
+                <circle id="new_point" cx.id="demo" cy.id="demo2"/>
+                <!-- HOW CAN I MAKE THE CIRCLE HAVE CX / CY FROM SELECTION TOOL -->
 
             </svg>
 
@@ -34,7 +36,43 @@
         <div class="right_col">
             <p id ='pointClick'>Last point clicked:</p>
             <p id='point'> filler </p>
+
+            <!-- drop down menus for new x and y values -->
+            <form>Select the x coordinate for the point you want to add.
+                <select id="x_coord">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                </select>
+            <br></br>
+            </form>
+
+            <form>Select the y coordinate for the point you want to add.
+                <select id="y_coord">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                </select>
+            <br></br>
+            <input type="button" onclick="getPoint()" value="Add point">
+            </form>
+
+            <p id="demo"></p>
+            <p id="demo2"></p>
             
+
         </div>
     </div>
 
