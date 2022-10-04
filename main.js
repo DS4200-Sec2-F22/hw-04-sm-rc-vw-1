@@ -24,13 +24,22 @@ function getPoint() {
     var x_coord = document.getElementById("x_coord");
     var y_coord = document.getElementById("y_coord");
 
-    var cx = x_coord / 40;
-    var cy = (y_coord - 375) / - 40;
+    x_coord = x_coord.options[x_coord.selectedIndex].text;
+    y_coord = y_coord.options[y_coord.selectedIndex].text;
 
-    document.getElementById("demo").innerHTML = x_coord.options[x_coord.selectedIndex].text;
-    document.getElementById("demo2").innerHTML = y_coord.options[y_coord.selectedIndex].text;
+    var cx = x_coord * 40;
+    var cy = 375 - (y_coord * 40);
 
-    document.getElementById("new_point").cx = cx;
+    var newP = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    newP.setAttribute('cx', cx);
+    newP.setAttribute('cy', cy);
+    newP.setAttribute('r', 10);
+    var svg = document.getElementById('frame')
+    svg.appendChild(newP);
+
+    //document.getElementById("demo").innerHTML = x_coord.options[x_coord.selectedIndex].text;
+    // document.getElementById("demo2").innerHTML = y_coord.options[y_coord.selectedIndex].text;
+
     // HOW CAN I MAKE CX AND CY WITH THE ABOVE POINTS
 
 }
