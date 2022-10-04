@@ -7,7 +7,7 @@ body {
 }
 
 .two_cols {
-	padding: 10px;
+	padding: 30px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -33,5 +33,18 @@ circle {
 
 circle:hover {
 	fill: orange;
+}
+
+.borderAdd {
+	stroke: limegreen;
+	stroke-width: 5px;
+}
+
+#pointClick {
+	display: none;
+}
+
+#point {
+	display: none;
 }
 
