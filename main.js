@@ -37,9 +37,4 @@ function getPoint() {
     var svg = document.getElementById('frame')
     svg.appendChild(newP);
 
-    //document.getElementById("demo").innerHTML = x_coord.options[x_coord.selectedIndex].text;
-    // document.getElementById("demo2").innerHTML = y_coord.options[y_coord.selectedIndex].text;
-
-    // HOW CAN I MAKE CX AND CY WITH THE ABOVE POINTS
-
 }
