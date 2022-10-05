@@ -3,7 +3,7 @@ var circles = document.getElementsByTagName("circle");
 
 // goes through circles and adds event handler to each
 for (var i = 0; i < circles.length; i++) {
-    document.getElementsByTagName("circle")[i].addEventListener("click", function() {
+    document.getElementsByTagName("circle")[i].addEventListener("click", function clicker() {
     // adding border
     this.classList.toggle("borderAdd");
     
@@ -34,7 +34,7 @@ function getPoint() {
     newP.setAttribute('cx', cx);
     newP.setAttribute('cy', cy);
     newP.setAttribute('r', 10);
-    newP.addEventListener("click", function() {
+    newP.addEventListener("click", function clicker() {
     // adding border
     this.classList.toggle("borderAdd");
     
@@ -48,7 +48,7 @@ function getPoint() {
     pointtext.style.display = 'block';
   });
 
-    var svg = document.getElementById('frame')
+    var svg = document.getElementById('frame');
     svg.appendChild(newP);
 
 }
